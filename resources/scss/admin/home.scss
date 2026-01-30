@@ -1,0 +1,24 @@
+.top {
+    background: var(--admin-card-bg);
+    border-radius: var(--admin-radius);
+    box-shadow: var(--admin-shadow);
+    padding: 48px 32px;
+    max-width: 720px;
+}
+
+.top .title {
+    font-size: 1.5rem;
+    color: var(--admin-text);
+    text-align: center;
+    padding: 0 0 24px;
+    margin: 0 0 16px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.top .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--admin-text-muted);
+    text-align: center;
+    margin: 0;
+}

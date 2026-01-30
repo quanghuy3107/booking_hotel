@@ -1,0 +1,51 @@
+.admin-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--admin-sidebar-width);
+    height: 100vh;
+    background: var(--admin-sidebar-bg);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.menu-block {
+    padding: 24px 0;
+    width: 100%;
+
+    .title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--admin-sidebar-text);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0 20px 16px;
+        margin: 0 0 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 8px 0;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    a.link {
+        display: block;
+        padding: 12px 20px;
+        color: var(--admin-sidebar-text);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        transition: background 0.15s ease, color 0.15s ease;
+
+        &:hover {
+            background: var(--admin-sidebar-hover);
+            color: var(--admin-sidebar-accent);
+        }
+    }
+}
