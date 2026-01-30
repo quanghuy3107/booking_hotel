@@ -38,9 +38,6 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="pagination-wrap">
-                    {{ $hotelList->links() }}
-                </div>
             @else
                 <p class="no-results">検索結果がありません</p>
             @endif

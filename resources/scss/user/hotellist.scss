@@ -95,3 +95,33 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+@media (max-width: 480px) {
+    .hotellist_container {
+        padding: 0;
+    }
+
+    .hotel_link {
+        margin-bottom: 16px;
+    }
+
+    .left_wrapper {
+        max-height: 180px;
+
+        img {
+            height: 180px;
+        }
+    }
+
+    .right_wrapper {
+        padding: 16px 20px 20px;
+    }
+
+    .hotel_title {
+        font-size: 1.125rem;
+    }
+
+    .hotel_information {
+        font-size: 0.875rem;
+    }
+}

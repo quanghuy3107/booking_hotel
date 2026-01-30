@@ -23,7 +23,15 @@
 
 .side-wrapper {
     flex: 1;
-    min-width: 280px;
+    min-width: 0;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .side-wrapper {
+        min-width: 280px;
+        width: auto;
+    }
 }
 
 .area_wrapper {
@@ -66,6 +74,21 @@
 
     &:hover {
         color: var(--user-primary);
+    }
+}
+
+@media (max-width: 480px) {
+    .prefecture_container {
+        padding: 20px 16px 32px;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    .area {
+        font-size: 0.9375rem;
+    }
+    .pref {
+        font-size: 0.875rem;
     }
 }
 

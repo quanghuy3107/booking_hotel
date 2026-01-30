@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 .page-wrapper {
     margin-left: var(--admin-sidebar-width);
     padding: 24px 32px 40px;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
 
 h2.title {
@@ -91,4 +91,27 @@ h2.title {
 
 .error-message {
     color: var(--admin-danger);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .page-wrapper {
+        margin-left: 0;
+        padding: 16px 20px 24px;
+    }
+
+    h2.title {
+        font-size: 1.25rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .page-wrapper {
+        padding: 12px 16px 20px;
+    }
+
+    h2.title {
+        font-size: 1.125rem;
+    }
 }

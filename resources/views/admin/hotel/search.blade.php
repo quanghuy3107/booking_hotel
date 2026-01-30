@@ -42,4 +42,5 @@
         <hr>
     </div>
     @yield('search_results')
+
 @endsection

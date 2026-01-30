@@ -14,7 +14,8 @@
     background: var(--admin-card-bg);
     border-radius: var(--admin-radius);
     box-shadow: var(--admin-shadow);
-    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 table.shopsearchlist_table {
@@ -69,6 +70,37 @@ table.shopsearchlist_table {
         form {
             margin: 0 4px 0 0;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    table.shopsearchlist_table {
+        font-size: 0.875rem;
+        min-width: 600px;
+
+        thead tr td,
+        tbody tr td {
+            padding: 10px 12px;
+        }
+    }
+
+    .confirm-table {
+        font-size: 0.875rem;
+
+        td:first-child {
+            width: 100px;
+        }
+    }
+
+    .confirm-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination-wrap .page-link {
+        padding: 6px 10px;
+        font-size: 0.875rem;
     }
 }
 

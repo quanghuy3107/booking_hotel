@@ -22,3 +22,28 @@
     text-align: center;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .top {
+        padding: 24px 20px;
+        max-width: 100%;
+    }
+
+    .top .title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .top {
+        padding: 20px 16px;
+    }
+
+    .top .title {
+        font-size: 1.125rem;
+    }
+
+    .top .description {
+        font-size: 0.9375rem;
+    }
+}

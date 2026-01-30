@@ -49,3 +49,36 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .admin-menu {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .menu-block {
+        padding: 12px 0;
+
+        .title {
+            padding: 0 16px 12px;
+            margin: 0 0 4px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 0 12px 12px;
+        }
+
+        li {
+            flex: 0 0 auto;
+        }
+
+        a.link {
+            padding: 8px 14px;
+            font-size: 0.875rem;
+        }
+    }
+}

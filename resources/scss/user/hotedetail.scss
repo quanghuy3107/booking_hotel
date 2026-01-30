@@ -33,6 +33,21 @@
     margin: 0;
 }
 
+@media (max-width: 480px) {
+    .hotedetail_container {
+        padding: 20px 16px 32px;
+    }
+    .hotedetail_container img {
+        max-height: 240px;
+    }
+    .hotedetail_container .hotel_title {
+        font-size: 1.25rem;
+    }
+    .hotedetail_container .hotel_information {
+        font-size: 0.9375rem;
+    }
+}
+
 @media (min-width: 640px) {
     .hotedetail_container {
         padding: 40px 40px 56px;

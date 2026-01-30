@@ -17,9 +17,7 @@ class HotelController extends Controller
     public function showSearch(Request $request): View
     {
         $prefectures = Prefecture::orderBy('prefecture_id')->get();
-        $perPage = (int) $request->input('per_page', 10);
-        $perPage = $perPage >= 1 && $perPage <= 50 ? $perPage : 10;
-        $hotelList = Hotel::with('prefecture')->orderBy('hotel_id')->paginate($perPage)->withQueryString();
+        $hotelList = Hotel::with('prefecture')->orderBy('hotel_id')->get();
 
         return view('admin.hotel.result', [
             'hotelList' => $hotelList,
@@ -47,7 +45,6 @@ class HotelController extends Controller
         return view('admin.hotel.create', compact('prefectures'));
     }
 
-    /** post methods */
 
     public function searchResult(Request $request): View
     {
@@ -59,10 +56,16 @@ class HotelController extends Controller
             $prefectureId = (int) $prefectureId;
         }
 
-        $perPage = (int) $request->input('per_page', 10);
-        $perPage = $perPage >= 1 && $perPage <= 50 ? $perPage : 10;
-
-        $hotelList = Hotel::searchHotelsPaginate($hotelName ?: null, $prefectureId, $perPage);
+        $hotelList = Hotel::when($hotelName, function ($query) use ($hotelName) {
+            return $query->where('hotel_name', 'LIKE', '%' . $hotelName . '%');
+        })
+            ->when($prefectureId, function ($query) use ($prefectureId) {
+                return $query->where('prefecture_id', $prefectureId);
+            })
+            ->with('prefecture')
+            ->orderBy('hotel_id')
+            ->get();
+        
         $prefectures = Prefecture::orderBy('prefecture_id')->get();
 
         return view('admin.hotel.result', [
