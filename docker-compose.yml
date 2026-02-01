@@ -119,7 +119,7 @@ services:
         links:
             - mysql:mysql
         ports:
-            - 8088:80
+            - 88:80
         environment:
             MYSQL_USERNAME: '${DB_USERNAME}'
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'

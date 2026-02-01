@@ -166,7 +166,7 @@ class HotelController extends Controller
 
         $hotel->save();
 
-        return redirect()->route('adminHotelSearchPage')->with('success', 'Hotel created successfully.');
+        return redirect()->route('adminHotelSearchPage')->with('success', 'ホテルは正常に作成されました。');
     }
 
     public function delete(Request $request, $id)
@@ -174,7 +174,7 @@ class HotelController extends Controller
         $hotel = Hotel::findOrFail($id);
         $hotel->delete();
 
-        return redirect()->route('adminHotelSearchPage')->with('success', 'Hotel deleted successfully.');
+        return redirect()->route('adminHotelSearchPage')->with('success', 'ホテルは正常に削除されました。');
     }
 
     private function storeHotelImage(\Illuminate\Http\UploadedFile $file): string
